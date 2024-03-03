@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .destination {
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 15px; 
+    margin-bottom: 20px; 
+}
+        .destination h3 {
+            margin-top: 0;
+        }
+        .image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.image-container img {
+    width: 200px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+}
+        .glow {
+            display: inline-block;
+            animation: glow 1.5s ease-in-out infinite alternate; 
+            background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff); 
+            background-size: 400% 400%; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        @keyframes glow {
+            0% {
+                background-position: 0 0; 
+            }
+            100% {
+                background-position: 100% 100%; 
+            }
+        }
+        .glow-pulse {
+            display: inline-block;
+            animation: glow 1.5s ease-in-out infinite alternate; 
+            background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff); 
+            background-size: 400% 400%; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            animation-name: pulse;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                background-position: 0 0; /* Initial position */
+            }
+            100% {
+                background-position: 100% 100%; /* Final position */
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1); /* Initial scale */
+            }
+            50% {
+                transform: scale(1.1); /* Scale up */
+            }
+            100% {
+                transform: scale(1); /* Return to original scale */
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left; /* Align text to the left */
+        }
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .background-image-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('back.jpg');
+        background-size: cover;
+        z-index: -1;
+        opacity: 0.3; /* 根據需要調整不透明度 */
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="background-image-container"></div>
+    <header>
+        <h1>Welcome to <span class="glow">Ben的包車服務網站</span></h1>
+    </header>
+    <nav>
+        <a href="#" id="homeLink">主頁</a>
+        <a href="#" id="tripLink">推薦行程</a>
+        <a href="#" id="priceLink">價格</a>
+        <a href="#" id="contactLink">聯絡我</a>
+    </nav>
+    <div class="container" id="homeContent">
+        <div>
+            <h2 class="glow-pulse">珀斯最熱情的司機</h2>
+        </div>
+        <div>
+            <h4 class="glow-pulse">為您提供最佳的旅行建議</h4>
+        </div>
+        <p>我是Ben，在柏斯註冊的包車司機。 我來自香港，現在擔任優步司機和包車服務。
+
+            <br><br>我會說英語、粵語和國語
+           
+            <br><br>除了推薦的觀光旅遊外，您還可以規劃一場運動包車之旅，包括樹頂冒險、乘坐熱氣球、跳傘以及珀斯的許多其他活動。 和我一起規劃你的旅程吧！ </p>
+            <img src="Designer.png" alt="Main" style="max-width: 100%; height: auto;">
+    </div>
+    <div class="container" id="tripContent" style="display: none;">
+        <h2>推薦行程</h2>
+        <section class="destination">
+            <h3>南部之旅（約12小時）</h3>
+            <div class="image-container">
+                <img src="dophins.jpg" alt="Dolphins">
+                <img src="voyager.jpg" alt="Voyager Estate">
+                <img src="lakecave.jpg" alt="Lake Cave">
+                <img src="jetty.jpg" alt="Busselton Jetty">
+            </div>
+            <p>Perth > Mandurah Dolphin Tour > Voyager Estate > Margaret River Lake Cave > Busselton Jetty > Perth</p>
+        </section>
+        <section class="destination">
+            <h3>北部之旅（約11小時）</h3>
+            <div class="image-container">
+                <img src="yanchep_cave.jpg" alt="Yanchep Cave">
+                <img src="lobster.jpg" alt="Lobster Shack">
+                <img src="pinnacle.jpg" alt="Pinnacle Desert">
+                <img src="lancelin.jpg" alt="Lancelin Sand Dunes">
+            </div>
+            <p>Perth > Yanchep Cave > Lobster Shack > Pinnacle Desert > Lancelin Sand Dunes > Perth</p>
+        </section>
+        <section class="destination">
+            <h3>都會區之旅（約 10-12 小時）</h3>
+            <div class="image-container">
+                <img src="caversham.jpg" alt="Caversham Wildlife Park">
+                <img src="swan_vally.jpg" alt="Swan Valley">
+                <img src="blue_house.jpg" alt="Blue Boat House">
+                <img src="kingspark.jpg" alt="Kings Park">
+                <img src="fremantle.jpg" alt="Fremantle">
+            </div>
+            <p>Perth > Caversham Wildlife Park > Swan Valley > Blue Boat House > Kings Park > Fremantle > Perth</p>
+        </section>
+        <section class="destination">
+            <h3>定制您自己的旅行</h3>
+            <img src="own_trip.jpg" alt="Customize Your Own Trip">
+            <p>與我討論規劃您的夢想之旅</p>
+        </section>
+    </div>
+    <div class="container" id="priceContent" style="display: none;">
+        <section>
+            <!-- Your contact content goes here -->
+            <p>這是基本價目表（僅包車）</p>
+            <section class="destination">
+                <h3>價目表</h3>
+                <table>
+                    <tr>
+                        <th>目的地</th>
+                        <th>價目</th>
+                    </tr>
+                    <tr>
+                        <td>南部之旅</td>
+                        <td>$500</td>
+                    </tr>
+                    <tr>
+                        <td>北部之旅</td>
+                        <td>$450</td>
+                    </tr>
+                    <tr>
+                        <td>都會區之旅</td>
+                        <td>$400 到 $450</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="destination">
+                <h3>推薦附加活動門票價格表</h3>
+                <table>
+                    <tr>
+                        <th>活動</th>
+                        <th>附加門票價格</th>
+                    </tr>
+                    <tr>
+                        <td>海豚之旅</td>
+                        <td>$39 每人</td>
+                    </tr>
+                    <tr>
+                        <td>國家公園門票</td>
+                        <td>$17 每輛汽車</td>
+                    </tr>
+                    <tr>
+                        <td>Yanchep洞穴門票</td>
+                        <td>每人起 $16</td>
+                    </tr>
+                    <tr>
+                        <td>湖洞門票</td>
+                        <td>每人起 $24</td>
+                    </tr>
+                    <tr>
+                        <td>卡弗舍姆野生動物園門票</td>
+                        <td>$34 每人</td>
+                    </tr>
+                    <tr>
+                        <td>布塞爾頓碼頭門票</td>
+                        <td>根據活動而定</td>
+                    </tr>
+                    <tr>
+                        <td>弗里曼特爾監獄門票</td>
+                        <td>根據活動而定</td>
+                    </tr>
+                    <tr>
+                        <td>蘭塞林沙丘門票</td>
+                        <td>根據活動而定</td>
+                    </tr>
+                </table>
+                <p>請注意，本網站提供的門票價格可能會在沒有事先通知的情況下變動。我們建議在預訂或購買前查看官方網站，以獲取最新和最準確的價格信息。雖然我們努力保持信息的及時性，但由於各場所或當局的潛在波動，我們無法保證門票價格的準確性。謝謝您的理解。</p>
+            </section>
+        </section>
+    </div>
+    <div class="container" id="contactContent" style="display: none;">
+        <h2>聯絡我</h2>
+        <section>
+            <!-- Your contact content goes here -->
+            <div>
+                <p>Whatsapp : +852 65718281</p>
+                </div>
+                <div></div>
+                <p>Email : handsomeben0816@gmail.com</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Ben's Website. All rights reserved.</p>
+    </footer>
+    <script>
+        const homeLink = document.getElementById('homeLink');
+        const tripLink = document.getElementById('tripLink');
+        const contactLink = document.getElementById('contactLink');
+        const priceLink = document.getElementById('priceLink');
+        const homeContent = document.getElementById('homeContent');
+        const tripContent = document.getElementById('tripContent');
+        const contactContent = document.getElementById('contactContent');
+        const priceContent = document.getElementById('priceContent');
+        
+        homeLink.addEventListener('click', function() {
+            homeContent.style.display = 'block';
+            tripContent.style.display = 'none';
+            contactContent.style.display = 'none';
+            priceContent.style.display = 'none';
+        });
+
+        tripLink.addEventListener('click', function() {
+            homeContent.style.display = 'none';
+            tripContent.style.display = 'block';
+            contactContent.style.display = 'none';
+            priceContent.style.display = 'none';
+        });
+
+        contactLink.addEventListener('click', function() {
+            homeContent.style.display = 'none';
+            tripContent.style.display = 'none';
+            contactContent.style.display = 'block';
+            priceContent.style.display = 'none';
+        });
+       priceLink.addEventListener('click', function() {
+            homeContent.style.display = 'none';
+            tripContent.style.display = 'none';
+            contactContent.style.display = 'none';
+            priceContent.style.display = 'block';
+        });
+
+    </script>
+      <script>
+        // Function to switch to Traditional Chinese page
+        function switchToTraditionalChinese() {
+            window.location.href = "traditional_chinese.html";
+        }
+
+        // Function to switch to Simplified Chinese page
+        function switchToSimplifiedChinese() {
+            window.location.href = "simplified_chinese.html";
+        }
+    </script>
+
+</body>
+</html>
