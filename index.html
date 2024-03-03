@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .destination {
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+    padding: 15px; 
+    margin-bottom: 20px; 
+}
+        .destination h3 {
+            margin-top: 0;
+        }
+        .image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.image-container img {
+    width: 200px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin-right: 10px; 
+}
+        .glow {
+            display: inline-block;
+            animation: glow 1.5s ease-in-out infinite alternate; 
+            background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff); 
+            background-size: 400% 400%; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        @keyframes glow {
+            0% {
+                background-position: 0 0; 
+            }
+            100% {
+                background-position: 100% 100%; 
+            }
+        }
+        .glow-pulse {
+            display: inline-block;
+            animation: glow 1.5s ease-in-out infinite alternate; 
+            background-image: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff); 
+            background-size: 400% 400%; 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            animation-name: pulse;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                background-position: 0 0; /* Initial position */
+            }
+            100% {
+                background-position: 100% 100%; /* Final position */
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1); /* Initial scale */
+            }
+            50% {
+                transform: scale(1.1); /* Scale up */
+            }
+            100% {
+                transform: scale(1); /* Return to original scale */
+            }
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left; /* Align text to the left */
+        }
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .background-image-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('back.jpg');
+        background-size: cover;
+        z-index: -1;
+        opacity: 0.3; /* 根據需要調整不透明度 */
+    }
+
+    </style>
+</head>
+<body>
+    <div class="background-image-container"></div>
+    <header>
+        <h1>Welcome to <span class="glow">Ben's Chartered Car Service Website</span></h1>
+        <button onclick="switchToTraditionalChinese()">切換到繁體中文</button>
+        <button onclick="switchToSimplifiedChinese()">切换到简体中文</button>
+    </header>
+    <nav>
+        <a href="#" id="homeLink">Home</a>
+        <a href="#" id="tripLink">Recommended Trip</a>
+        <a href="#" id="priceLink">Price</a>
+        <a href="#" id="contactLink">Contact</a>
+    </nav>
+    <div class="container" id="homeContent">
+        <div>
+        <h2 class="glow-pulse">Perth most enthusiastic driver </h2>
+        </div>
+        <div>
+        <h4 class="glow-pulse">To provide you with the best travel advice </h4>
+
+        <p>I am Ben a regisited charter vehicle driver in Perth. I came from Hong Kong and work as a uber driver and chartered vehicle service now.<br>
+            <br> I can speak both English, Cantonese and Mandarin<br>
+            
+            <br> 
+            Apart from the recommended sightseeing tours, you can also plan a sporty trip that includes tree-top adventures, hot air balloon rides, skydiving, and many other activities in Perth. Plan your journey with me!
+        </p>
+        </div>
+        <img src="Designer.png" alt="Main" style="max-width: 100%; height: auto;">
+    </div>
+    <div class="container" id="tripContent" style="display: none;">
+        <h2>Recommended Trip</h2>
+        <section class="destination">
+            <h3>Southern Trip (12 hour approx.)  </h3>
+            <div class="image-container">
+                <img src="dophins.jpg" alt="Dolphins">
+                <img src="voyager.jpg" alt="Voyager Estate">
+                <img src="lakecave.jpg" alt="Lake Cave">
+                <img src="jetty.jpg" alt="Busselton Jetty">
+            </div>
+            <p>Perth > Mandurah Dolphin Tour > Voyager Estate > Margaret River Lake Cave > Busselton Jetty > Perth</p>
+        </section>
+        <section class="destination">
+            <h3>Northern Trip (11 hour approx.)</h3>
+            <div class="image-container">
+                <img src="yanchep_cave.jpg" alt="Yanchep Cave">
+                <img src="lobster.jpg" alt="Lobster Shack">
+                <img src="pinnacle.jpg" alt="Pinnacle Desert">
+                <img src="lancelin.jpg" alt="Lancelin Sand Dunes">
+            </div>
+            <p>Perth > Yanchep Cave > Lobster Shack > Pinnacle Desert > Lancelin Sand Dunes > Perth</p>
+        </section>
+        <section class="destination">
+            <h3>Metro Area Trip (10-12 hour approx.)</h3>
+            <div class="image-container">
+                <img src="caversham.jpg" alt="Caversham Wildlife Park">
+                <img src="swan_vally.jpg" alt="Swan Valley">
+                <img src="blue_house.jpg" alt="Blue Boat House">
+                <img src="kingspark.jpg" alt="Kings Park">
+                <img src="fremantle.jpg" alt="Fremantle">
+            </div>
+            <p>Perth > Caversham Wildlife Park > Swan Valley > Blue Boat House > Kings Park > Fremantle > Perth</p>
+        </section>
+        <section class="destination">
+            <h3>Customize Your Own Trip</h3>
+            <img src="own_trip.jpg" alt="Customize Your Own Trip">
+            <p>Discuss with me to plan your dream trip</p>
+        </section>
+    </div>
+    <div class="container" id="priceContent" style="display: none;">
+    <section>
+        <!-- Your contact content goes here -->
+        <p>This is Basic Price List ( Charter a car only ) </p>
+        <section class="destination">
+            <h3>Price List</h3>
+            <table>
+                <tr>
+                    <th>Destination</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Southern Trip</td>
+                    <td>$500</td>
+                </tr>
+                <tr>
+                    <td>Northern Trip</td>
+                    <td>$450</td>
+                </tr>
+                <tr>
+                    <td>Metro Area Trip</td>
+                    <td>$400-450</td>
+                </tr>
+               
+            </table>
+        </section>
+
+       
+<section class="destination">
+    <h3>Recommended Additional Activities Ticket Price List</h3>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Additional Ticket Price</th>
+        </tr>
+        <tr>
+            <td>Dophins Tour</td>
+            <td>$39 per person </td>
+        </tr>
+        <tr>
+            <td>National Park Ticket</td>
+            <td>$17 per Car</td>
+        </tr>
+        <tr>
+            <td>Yanchep cave Ticket</td>
+            <td>From $16 per person</td>
+        </tr>
+        <tr>
+            <td>Lake cave Ticket</td>
+            <td>From $24 per person</td>
+        </tr>
+
+        <tr>
+            <td>Caversham Wildlife park Ticket</td>
+            <td>$34 per person</td>
+        </tr>
+
+        <tr>
+            <td>Busselton Jetty Ticket</td>
+            <td>Depends on activities
+            </td>
+        </tr>
+
+        <tr>
+            <td>Fremantle Prison Ticket</td>
+            <td>Depends on activities
+            </td>
+        </tr>
+
+        <tr>
+            <td>Lancelin Sand Dunes Ticket</td>
+            <td>Depends on activities
+            </td>
+        </tr>
+    </table>
+
+    <p>"Please note that ticket prices mentioned on this website are subject to change without prior notice. We recommend checking the official website for the latest and most accurate pricing information before making any bookings or purchases. While we strive to keep our information up-to-date, we cannot guarantee the accuracy of ticket prices due to potential fluctuations by the respective venues or authorities. Thank you for your understanding."</p>
+</section>
+        
+    </section>
+    </div>
+    <div class="container" id="contactContent" style="display: none;">
+        <h2>Contact</h2>
+        <section>
+            <!-- Your contact content goes here -->
+            <div>
+            <p>Whatsapp : +852 65718281</p>
+            </div>
+            <div></div>
+            <p>Email : handsomeben0816@gmail.com</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ben's Website. All rights reserved.</p>
+    </footer>
+    <script>
+        const homeLink = document.getElementById('homeLink');
+        const tripLink = document.getElementById('tripLink');
+        const contactLink = document.getElementById('contactLink');
+        const priceLink = document.getElementById('priceLink');
+        const homeContent = document.getElementById('homeContent');
+        const tripContent = document.getElementById('tripContent');
+        const contactContent = document.getElementById('contactContent');
+        const priceContent = document.getElementById('priceContent');
+        
+        homeLink.addEventListener('click', function() {
+            homeContent.style.display = 'block';
+            tripContent.style.display = 'none';
+            contactContent.style.display = 'none';
+            priceContent.style.display = 'none';
+        });
+
+        tripLink.addEventListener('click', function() {
+            homeContent.style.display = 'none';
+            tripContent.style.display = 'block';
+            contactContent.style.display = 'none';
+            priceContent.style.display = 'none';
+        });
+
+        contactLink.addEventListener('click', function() {
+            homeContent.style.display = 'none';
+            tripContent.style.display = 'none';
+            contactContent.style.display = 'block';
+            priceContent.style.display = 'none';
+        });
+       priceLink.addEventListener('click', function() {
+            homeContent.style.display = 'none';
+            tripContent.style.display = 'none';
+            contactContent.style.display = 'none';
+            priceContent.style.display = 'block';
+        });
+
+    </script>
+      <script>
+        // Function to switch to Traditional Chinese page
+        function switchToTraditionalChinese() {
+            window.location.href = "traditional_chinese.html";
+        }
+
+        // Function to switch to Simplified Chinese page
+        function switchToSimplifiedChinese() {
+            window.location.href = "simplified_chinese.html";
+        }
+    </script>
+
+</body>
+</html>
